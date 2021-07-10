@@ -1,0 +1,193 @@
+:root {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+body {
+    background-color: #292929;
+    color: white;
+
+}
+
+#header {
+    margin: 0;
+    text-align: center;
+    width: 100vw;
+    height: 10vh;
+    font-size: 1.6rem;
+}
+
+#introCard {
+    display: grid;
+    grid-template-columns: auto auto;
+    border: 1px solid black;
+    box-shadow: 0 10px 10px black;
+    height: 25vh;
+    line-height: 1.5rem;
+    padding-top: 1rem;
+    text-align: center;
+    animation-name: slideInMobile;
+    animation-duration: 2s;
+}
+
+
+@keyframes slideInDesktop {
+    from {width: 0; margin-left: 50vw;}
+    to {width: 80vw; margin-left: 10vw;}
+}
+
+@keyframes slideInMobile {
+    from {width: 0; margin-left: 50vw;}
+    to {width: 100vw; margin-left: 0vw;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 75;}
+}
+
+#introductionText {
+    display: block;
+    height: 25vh;
+    width: 50vw;
+}
+
+@media only screen and (min-height: 960px) {
+    #introductionText {
+        margin-top: 1.7rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #introductionText {
+        width: 75vw;
+    }
+}
+
+#introImage {
+    display: block;
+    width: 20vw;
+    height: 20vh;
+    background-image: url("img/devIcon.svg");
+    background-repeat: no-repeat;
+    background-size: 20vw 20vh;
+    animation-name: fadeIn;
+    animation-duration: 5s;
+}
+
+.sectionHeader {
+    margin-top: 5vh;
+    text-align: center;
+    height: 7vh;
+    border: 1px solid black;
+    box-shadow: 0 10px 10px black;
+    animation-name: slideInFromBottom;
+    animation-duration: 2s;
+}
+
+.sectionHeaderText {
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: 18px;
+    padding-top: 1vh;
+}
+
+
+@media only screen and (min-width: 1280px) {
+    #introCard {
+        width: 80vw;
+        margin-left: 10vw;
+        font-size: 2rem;
+        line-height: 3rem;
+        padding-top: 3rem;
+        animation-name: slideInDesktop;
+        animation-duration: 2s;
+    }
+
+    .sectionHeader {
+        width: 80vw;
+        margin-left: 10vw;
+    }
+
+    .sectionHeaderText {
+        font-size: 55px;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {margin-top: 100vh;}
+    to {margin-top: 5vh;}
+}
+
+@keyframes cardSlide {
+    from {margin-top: 100vh;}
+    to {margin-top: 0vh;}
+}
+
+#WIDSection {
+    justify-content: space-between;
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.WIDCard {
+    text-align: center;
+    border: 1px solid black;
+    height: 25vh;
+    width: 30vw;
+    box-shadow: 0 10px 10px black;
+}
+
+.WIDCard:hover {
+    height: 30vh;
+    width: 33vw;
+    margin-top: -2vh;
+}
+
+#aboutCard {
+    background-image: url('img/aboutIcon.svg');
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    animation-name: cardSlide;
+    animation-duration: 1.75s;
+    animation-timing-function:ease-in-out;
+}
+
+#projectsCard {
+    background-image: url('img/projectsIcon.svg');
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    animation-name: cardSlide;
+    animation-duration: 2s;
+    animation-timing-function:ease-in-out;
+}
+
+#connectCard {
+    background-image: url('img/connectIcon2.svg');
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;    
+    animation-name: cardSlide;
+    animation-duration: 2.25s;
+    animation-timing-function:ease-in-out;
+}
+
+.window {
+    display: none;
+    background-color: #393939;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 95vh;
+    width: 95vw;
+    margin-top: 2vh;
+    margin-right: 2vw;
+    border: 1px solid white;
+}
+
+#aboutWindow {
+    display: none;
+}
